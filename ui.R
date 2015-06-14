@@ -24,6 +24,8 @@ shinyUI(fluidPage(
             h3(textOutput("caption")),
             p("This application visualizes the distribution of different properties of the famous (Fisher's or Anderson's) iris data set (included in the R datasets package). It gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica."),
             p("The user can chose between the 4 different properties (sepal width, sepal length, pedal width, pedal) in the side panel. This produces a box plot showing the distribution of the selected property with respect to the iris species. It is possible to show outliers by clicking the \"Show outliers\" option in the side bar."),
+            p("Quantiles for chosen option averged over all 3 species:"),
+            verbatimTextOutput("quantiles"),
             plotOutput("irisPlot")
         )
     )
